@@ -17,9 +17,9 @@ function GeminiPro() {
 
   function parseStringToJson(inputString) {
     // Check if input string starts with markdown code block syntax
-    if (inputString.startsWith("```")) {
+    if (inputString.startsWith("")) {
       // Remove the markdown code block syntax and any leading/trailing whitespace
-      inputString = inputString.replace(/```json\n?|```\n?/g, "").trim();
+      inputString = inputString.replace(/json\n?|```\n?/g, "").trim();
     }
 
     // Parse the cleaned string into JSON

@@ -5,6 +5,7 @@ import { UserAuthContextProvider } from './context/UserAuthContext'
 import Login from './components/Login';
 import Signup from './components/Signup'
 import Landing from './components/Landing';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <Route path="/login" exact element={<Login />} />
             <Route path="/signup" exact element={<Signup />} />
           </Routes>
+          <Footer/>
         </UserAuthContextProvider>
     </>
   )

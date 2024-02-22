@@ -1,6 +1,14 @@
 import AlbumOutlinedIcon from "@mui/icons-material/AlbumOutlined";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Services = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+
     return (
         <div className="flex p-10 bg-[#F4F8FD] items-center">
             <div className="flex flex-col w-4/5 mx-auto justify-around items-center">
@@ -16,8 +24,8 @@ const Services = () => {
                     </div>
                 </div>
                 <div className="flex">
-                    <div className="flex flex-col w-1/3 mr-7">
-                        <img src="childDiagnosis.webp" alt="alt" className="w-full" />
+                    <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col w-1/3 mr-7">
+                        <img src="childDiag.webp" alt="alt" className="w-full" />
                         <h1 className="text-lg font-poppins font-semibold mb-1 mt-5">
                             Child Diagnosis
                         </h1>
@@ -30,8 +38,8 @@ const Services = () => {
                             Read More...
                         </h1>
                     </div>
-                    <div className="flex flex-col w-1/3 mr-7">
-                        <img src="landing.webp" alt="alt" className="w-full" />
+                    <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col w-1/3 mr-7">
+                        <img src="learningDis.webp" alt="alt" className="w-full" />
                         <h1 className="text-lg font-poppins font-semibold mb-1 mt-5">
                             Learning Disability Detection
                         </h1>
@@ -44,8 +52,8 @@ const Services = () => {
                             Read More...
                         </h1>
                     </div>
-                    <div className="flex flex-col w-1/3 ml-7">
-                        <img src="community.webp" alt="alt" className="w-full" />
+                    <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col w-1/3 ml-7">
+                        <img src="community2.webp" alt="alt" className="w-full" />
                         <h1 className="text-lg font-poppins font-semibold mb-1 mt-5">
                             Community Integration
                         </h1>
@@ -73,7 +81,7 @@ const Services = () => {
                         <h1 className="text-3xl font-poppins font-semibold mb-1 mt-5">
                             Features
                         </h1>
-                        <div className="flex items-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="flex items-center">
                             <AlbumOutlinedIcon
                                 sx={{ color: "green", height: "20px", width: "20px" }}
                             />
@@ -81,7 +89,7 @@ const Services = () => {
                                 Accurate Diagnosis
                             </h1>
                         </div>
-                        <div className="flex items-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="flex items-center">
                             <AlbumOutlinedIcon
                                 sx={{ color: "green", height: "20px", width: "20px" }}
                             />
@@ -89,7 +97,7 @@ const Services = () => {
                                 Community Integration
                             </h1>
                         </div>
-                        <div className="flex items-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="flex items-center">
                             <AlbumOutlinedIcon
                                 sx={{ color: "green", height: "20px", width: "20px" }}
                             />
@@ -97,7 +105,7 @@ const Services = () => {
                                 Cutting-Edge Web App
                             </h1>
                         </div>
-                        <div className="flex items-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="flex items-center">
                             <AlbumOutlinedIcon
                                 sx={{ color: "green", height: "20px", width: "20px" }}
                             />
@@ -105,7 +113,7 @@ const Services = () => {
                                 Innovative Research
                             </h1>
                         </div>
-                        <div className="flex items-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="flex items-center">
                             <AlbumOutlinedIcon
                                 sx={{ color: "green", height: "20px", width: "20px" }}
                             />
@@ -119,7 +127,7 @@ const Services = () => {
                         <h1 className="text-3xl font-poppins font-semibold mb-1 mt-5">
                             Features
                         </h1>
-                        <div className="flex items-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="flex items-center">
                             <AlbumOutlinedIcon
                                 sx={{ color: "green", height: "20px", width: "20px" }}
                             />
@@ -127,7 +135,7 @@ const Services = () => {
                                 Empowered Families
                             </h1>
                         </div>
-                        <div className="flex items-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="flex items-center">
                             <AlbumOutlinedIcon
                                 sx={{ color: "green", height: "20px", width: "20px" }}
                             />
@@ -135,7 +143,7 @@ const Services = () => {
                                 Connected Community
                             </h1>
                         </div>
-                        <div className="flex items-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="flex items-center">
                             <AlbumOutlinedIcon
                                 sx={{ color: "green", height: "20px", width: "20px" }}
                             />
@@ -143,7 +151,7 @@ const Services = () => {
                                 Invaluable Resources
                             </h1>
                         </div>
-                        <div className="flex items-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="flex items-center">
                             <AlbumOutlinedIcon
                                 sx={{ color: "green", height: "20px", width: "20px" }}
                             />
@@ -151,7 +159,7 @@ const Services = () => {
                                 Accurate Diagnoses
                             </h1>
                         </div>
-                        <div className="flex items-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="flex items-center">
                             <AlbumOutlinedIcon
                                 sx={{ color: "green", height: "20px", width: "20px" }}
                             />

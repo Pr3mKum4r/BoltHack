@@ -1,7 +1,7 @@
 const Hero = () =>{
     return(
-        <div className="flex bg-[#F4F8FD] p-10">
-            <div className="flex w-4/5 mx-auto">
+        <div className="flex bg-[#F4F8FD] p-10 h-[580px]">
+            <div className="flex w-4/5 mx-auto items-center">
                 <div className="flex flex-col px-5">
                     <h1 className="font-poppins font-semibold text-[60px] mb-2">
                         Revolutionizing Learning Disability Diagnosis
@@ -16,7 +16,7 @@ const Hero = () =>{
                 </div>
                 <div>
                     <img
-                        src="landing.webp"
+                        src="main.webp"
                         alt="img"
                         className="h-[500px] w-[500px] rounded-md"
                     />

@@ -17,7 +17,7 @@ function GeminiPro() {
 
   const fetchData = async () => {
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-    const prompt = `The age of the person is ${age},The gender of the person is ${gender} the Medical history(Past diagnoses, current medications, family history of neurological disorders, etc) is: ${MedicalHistory} , the symptoms(Specific symptoms experienced, onset and duration, severity, impact on daily life, etc) are ${symptoms},the functional limitations( Difficulties with mobility, speech, cognitive function, etc) are :${FunctionalLimitations}  suggest which neurological disorder the person has as a preliminary research purpose diagnosis and its treatment options adn reccomend visiting the specialist doctor related to this disorder  `;
+    const prompt = `The age of the person is ${age},The gender of the person is ${gender} the Medical history(Past diagnoses, current medications, family history of neurological disorders, etc) is: ${MedicalHistory} , the symptoms(Specific symptoms experienced, onset and duration, severity, impact on daily life, etc) are ${symptoms},the functional limitations( Difficulties with mobility, speech, cognitive function, etc) are :${FunctionalLimitations}  suggest which neurological disorder the person has as a preliminary research purpose diagnosis and its treatment options adn reccomend visiting the specialist doctor related to this disorder.Give me the anwser in json format `;
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const text = response.text();

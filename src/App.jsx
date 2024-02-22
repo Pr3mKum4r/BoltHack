@@ -5,12 +5,8 @@ import { UserAuthContextProvider } from './context/UserAuthContext'
 import Login from './components/Login';
 import Signup from './components/Signup'
 import Landing from './components/Landing';
-<<<<<<< Updated upstream
 import Footer from './components/Footer';
-
-=======
 import GeminiPro from './components/GeminiPro';
->>>>>>> Stashed changes
 function App() {
 
   return (

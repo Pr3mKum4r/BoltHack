@@ -5,8 +5,12 @@ import { UserAuthContextProvider } from './context/UserAuthContext'
 import Login from './components/Login';
 import Signup from './components/Signup'
 import Landing from './components/Landing';
+<<<<<<< Updated upstream
 import Footer from './components/Footer';
 
+=======
+import GeminiPro from './components/GeminiPro';
+>>>>>>> Stashed changes
 function App() {
 
   return (
@@ -17,6 +21,7 @@ function App() {
             <Route path="/" exact element={<Landing />} />
             <Route path="/login" exact element={<Login />} />
             <Route path="/signup" exact element={<Signup />} />
+            <Route path="/gemini" exact element={<GeminiPro />} />
           </Routes>
           <Footer/>
         </UserAuthContextProvider>

@@ -71,8 +71,8 @@ function Navbar() {
               component={Link}
               to={"/"}
             >
-              {/* <img src={Logo} alt='logo' className='logo'/> */}
-              <h3 className="logo-text">MEDICURE</h3>
+              <img src='/Logo.webp' alt='logo' className='logo'/>
+              <h3 className="logo-text">NEUROASSIST</h3>
             </Typography>
           </Link>
 
@@ -138,7 +138,7 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            MEDICURE
+            NEUROASSIST
           </Typography>
           <Box
             sx={{

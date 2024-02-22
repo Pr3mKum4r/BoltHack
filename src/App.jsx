@@ -7,6 +7,7 @@ import Signup from './components/Signup'
 import Landing from './components/Landing';
 import Footer from './components/Footer';
 import GeminiPro from './components/GeminiPro';
+import Autism from './components/Autism';
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/login" exact element={<Login />} />
             <Route path="/signup" exact element={<Signup />} />
             <Route path="/gemini" exact element={<GeminiPro />} />
+            <Route path="/autism" exact element={<Autism/>} />
           </Routes>
           <Footer/>
         </UserAuthContextProvider>

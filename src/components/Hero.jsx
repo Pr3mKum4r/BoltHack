@@ -7,7 +7,7 @@ const Hero = () =>{
                         Revolutionizing Learning Disability Diagnosis
                     </h1>
                     <h1 className="text-lg font-poppins font-normal">
-                        MediCure is a cutting-edge medical research organization dedicated
+                        NeuroAssist is a cutting-edge medical research organization dedicated
                         to empowering children and families affected by learning
                         disabilities. Through our innovative web app, we provide accurate
                         diagnoses and a supportive community.

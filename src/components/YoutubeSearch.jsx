@@ -1,7 +1,8 @@
 
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PropTypes from "prop-types";
+import { useLocation } from 'react-router';
 
 const YoutubeEmbed = ({ videoId }) => (
   <div className="video-responsive">
@@ -26,17 +27,23 @@ const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
-  const handleSearch = async (event) => {
-    event.preventDefault();
+  const handleSearch = async () => {
     const response = await axios.get(
-      `https://www.googleapis.com/youtube/v3/search?key=AIzaSyADtAr2moHoPH4Y_4AT7FfQJ6JZfaS6174&q=${encodeURIComponent(searchQuery)}&part=snippet&maxResults=20`
+      `https://www.googleapis.com/youtube/v3/search?key=AIzaSyB89T8dNThIGUTNZxGaObbedpzAP5S-Z6k&q=${searchQuery}+therapy to cure&part=snippet&maxResults=2`
     );
     setSearchResults(response.data.items);
   };
 
+  const location = useLocation();
+  useEffect(() => {
+    // Parse query parameters
+    const queryParams = new URLSearchParams(location.search);
+    setSearchQuery(queryParams.get('element'));
+    handleSearch();
+  }, []);
   return (
     <div>
-      <form onSubmit={handleSearch}>
+      {/* <form onSubmit={handleSearch}>
         <input
           type="text"
           placeholder="Search YouTube"
@@ -44,8 +51,9 @@ const SearchBar = () => {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
         <button type="submit">Search</button>
-      </form>
-      <div>
+      </form> */}
+      <h1 className="text-3xl font-bold font-poppins mb-4 text-center">{decodeURIComponent(searchQuery)}</h1>
+      <div className='flex flex-col mb-10 justify-center items-center'>
         {searchResults.map((item, index) => (
           <YoutubeEmbed key={index} videoId={item.id.videoId} />
         ))}

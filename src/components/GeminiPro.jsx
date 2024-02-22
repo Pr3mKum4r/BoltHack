@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import { useNavigate } from "react-router";
 
 function GeminiPro() {
   const [loading, setLoading] = useState(false);
@@ -55,27 +57,37 @@ function GeminiPro() {
     fetchData();
   };
 
+  const navigate = useNavigate();
+
+  const handleYouTubeIconClick = (element) => {
+    // Navigate with query parameters
+    navigate(`/yt?element=${encodeURIComponent(element)}`);
+  };
+
   return (
     <div className="flex flex-col items-center container mx-auto">
       <div className=" flex justify-center flex-col items-center bg-gray-300 px-10 rounded my-10 min-h-[60vh] min-w-[40vw]">
         {apiData ?
           <>
-            {apiData.preliminary_diagnosis && apiData.specialist_doctor && apiData.treatment_options ? 
-            <> 
-            <h1 className="font-poppins text-3xl text-start">Preliminary Diagnosis</h1>
-            <h1 className="font-poppins text-xl text-gray-500 text-start">{apiData["preliminary_diagnosis"]}</h1>
-            <h1 className="font-poppins text-3xl text-start">Specialist Doctor</h1>
-            <h1 className="font-poppins text-xl text-gray-500 text-start">{apiData.specialist_doctor}</h1>
-            <h1 className="font-poppins text-3xl text-start">Treatment Options</h1>
-            {
-              apiData.treatment_options.map((element, index) => (
-                <h1 key={index} className="font-poppins text-xl text-gray-600">{element}</h1>
-              ))
+            {apiData.preliminary_diagnosis && apiData.specialist_doctor && apiData.treatment_options ?
+              <>
+                <h1 className="font-poppins text-3xl text-start">Preliminary Diagnosis</h1>
+                <h1 className="font-poppins text-xl text-gray-500 text-start">{apiData["preliminary_diagnosis"]}</h1>
+                <h1 className="font-poppins text-3xl text-start">Specialist Doctor</h1>
+                <h1 className="font-poppins text-xl text-gray-500 text-start">{apiData.specialist_doctor}</h1>
+                <h1 className="font-poppins text-3xl text-start">Treatment Options</h1>
+                {
+                  apiData.treatment_options.map((element, index) => (
+                    <div className="flex items-center" key={index}>
+                      <h1 className="font-poppins text-xl text-gray-600 mr-4">{element}</h1>
+                      <YouTubeIcon className="text-red-700 cursor-pointer" onClick={() => handleYouTubeIconClick(element)}/>
+                    </div>
+                  ))
+                }
+              </>
+              :
+              <h1>No Disorder Found</h1>
             }
-            </>
-            :
-            <h1>No Disorder Found</h1>
-          }
           </> :
           <>
             <h1 className="text-3xl font-bold font-poppins mb-4">Diagnosis of Neurological Disorders</h1>

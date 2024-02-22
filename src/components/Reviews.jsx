@@ -25,7 +25,7 @@ const Reviews = () => {
                 <div data-aos="fade-left" data-aos-duration="500" className="flex flex-col w-6/12">
                     <h1 className="font-poppins text-3xl font-medium mb-1">Hear from Our Community</h1>
                     <h1 className="font-poppins text-xl text-green-700 font-normal">John Carter</h1>
-                    <h1 className="font-poppins text-[14pt] font-normal text-gray-600">MediCure has been a lifesaver for our family. Their web app diagnosed our child’s learning disability and connected us with a supportive community of other families. We don’t know what we would do without them!</h1>
+                    <h1 className="font-poppins text-[14pt] font-normal text-gray-600">NeuroAssist has been a lifesaver for our family. Their web app diagnosed our child’s learning disability and connected us with a supportive community of other families. We don’t know what we would do without them!</h1>
                 </div>
             </div>
         </div>

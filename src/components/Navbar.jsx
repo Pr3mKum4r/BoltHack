@@ -71,7 +71,7 @@ function Navbar() {
               component={Link}
               to={"/"}
             >
-              <img src='/Logo.webp' alt='logo' className='logo'/>
+              <img src='/logo.webp' alt='logo' className='rounded-full w-10 mr-5'/>
               <h3 className="logo-text">NEUROASSIST</h3>
             </Typography>
           </Link>

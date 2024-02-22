@@ -2,6 +2,7 @@ import AlbumOutlinedIcon from "@mui/icons-material/AlbumOutlined";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
     useEffect(() => {
@@ -10,18 +11,19 @@ const Services = () => {
     }, []);
 
     return (
+        <section id="services">
         <div className="flex p-10 bg-[#F4F8FD] items-center">
             <div className="flex flex-col w-4/5 mx-auto justify-around items-center">
-                <div className="flex items-center justify-between w-full">
+                <div className="flex items-center justify-between w-full mb-5">
                     <h1 className="font-poppins text-5xl font-medium mb-5">
                         Our Services
                     </h1>
-                    <div
+                    {/* <div
                         type="button"
                         className="h-fit text-white w-fit cursor-pointer bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                     >
                         View All Services
-                    </div>
+                    </div> */}
                 </div>
                 <div className="flex">
                     <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col w-1/3 mr-7">
@@ -34,9 +36,7 @@ const Services = () => {
                             diagnoses of conditions such as ADHD, dyslexia, and dysgraphia,
                             helping children get the support they need for…
                         </h1>
-                        <h1 className="text-sm font-poppins font-normal text-green-500">
-                            Read More...
-                        </h1>
+                        <a type="button" href="/gemini" className="text-white w-fit cursor-pointer bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Checkout</a>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col w-1/3 mr-7">
                         <img src="learningDis.webp" alt="alt" className="w-full" />
@@ -48,9 +48,7 @@ const Services = () => {
                             to detect a range of learning disabilities, allowing for early
                             intervention and support for children and their…
                         </h1>
-                        <h1 className="text-sm font-poppins font-normal text-green-500">
-                            Read More...
-                        </h1>
+                        <a type="button" href="/" className="text-white w-fit cursor-pointer bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Checkout</a>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col w-1/3 ml-7">
                         <img src="community2.webp" alt="alt" className="w-full" />
@@ -63,9 +61,7 @@ const Services = () => {
                             conditions, connecting them with similar experiences and providing
                             a sense…
                         </h1>
-                        <h1 className="text-sm font-poppins font-normal text-green-500">
-                            Read More...
-                        </h1>
+                        <a type="button" href="/" className="text-white w-fit cursor-pointer bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Checkout</a>
                     </div>
                 </div>
 
@@ -173,6 +169,7 @@ const Services = () => {
                 </div>
             </div>
         </div>
+        </section>
     );
 };
 

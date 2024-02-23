@@ -11,6 +11,7 @@ import Autism from './components/Autism';
 import SearchBar from './components/YoutubeSearch';
 import AutismTherapy from './components/AutismTherapy';
 import NoAutism from './components/NoAutism';
+import OCD from './components/OCD';
 function App() {
 
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/yt" exact element={<SearchBar/>} />
             <Route path='/autismTherapy' element={<AutismTherapy/>}/>
             <Route path='/noAutism' element={<NoAutism/>}/>
+            <Route path='/ocd' element={<OCD/>}/>
           </Routes>
           <Footer/>
         </UserAuthContextProvider>

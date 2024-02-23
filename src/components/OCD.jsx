@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const OCD = () =>{
     const [Gender, setGender] = useState("");
@@ -10,6 +11,8 @@ const OCD = () =>{
     const [ObsessionScore, setObsessionScore] = useState("");
     const [CompulsionScore, setCompulsionScore] = useState("");
     const [loading, setLoading] = useState(false);
+
+    const navigate = useNavigate();
 
     const handleSubmit = async () => {
         setLoading(true);
@@ -25,6 +28,12 @@ const OCD = () =>{
         const res = await axios.post("http://localhost:5000/ocd", data);
         console.log("Result from server: ", res.data);
         setLoading(false);
+        if(res.data == "Yes"){
+            navigate('/OCDTherapy');
+        }
+        else{
+            navigate('/noOCD');
+        }
     }
 
 

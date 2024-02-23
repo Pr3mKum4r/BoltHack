@@ -12,6 +12,8 @@ import SearchBar from './components/YoutubeSearch';
 import AutismTherapy from './components/AutismTherapy';
 import NoAutism from './components/NoAutism';
 import OCD from './components/OCD';
+import OCDTherapy from './components/OCDTherapy';
+import NoOCD from './components/NoOCD';
 function App() {
 
   return (
@@ -28,6 +30,8 @@ function App() {
             <Route path='/autismTherapy' element={<AutismTherapy/>}/>
             <Route path='/noAutism' element={<NoAutism/>}/>
             <Route path='/ocd' element={<OCD/>}/>
+            <Route path='/OCDTherapy' element={<OCDTherapy/>}/>
+            <Route path='/NoOCD' element={<NoOCD/>}/>
           </Routes>
           <Footer/>
         </UserAuthContextProvider>

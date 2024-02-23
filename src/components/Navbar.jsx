@@ -201,8 +201,8 @@ function Navbar() {
               Contact
             </Button>
             {/* </Link> */}
-            {!currentUser ? <div onClick={()=>{navigate('/login')}} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Login</div> :
-            <div onClick={()=>{logOut()}} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Logout</div>}
+            {!currentUser ? <div onClick={()=>{navigate('/login')}} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 mr-5 h-fit font-poppins py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Login</div> :
+            <div onClick={()=>{logOut()}} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-5 h-fit font-poppins dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Logout</div>}
           </Box>
           {currentUser && <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

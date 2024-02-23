@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 const Autism = () => {
     const [a1, setA1] = useState(null);
@@ -21,7 +22,7 @@ const Autism = () => {
     const [whyAreYouTake, setWhyAreYouTake] = useState(null);
     const [loading, setLoading] = useState(false);
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         setLoading(true);
         const data = {
             "a1": a1,
@@ -43,7 +44,8 @@ const Autism = () => {
             "applicant": applicant,
             "whyAreYouTake": whyAreYouTake
         }
-
+        const res = await axios.post('http://127.0.0.1:5000/autism', data);
+        console.log("Result from server : ", res.data)
         setLoading(false);
     }
 

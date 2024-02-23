@@ -1,9 +1,15 @@
 from flask import Flask, request, jsonify
 import pickle
 import numpy as np
+from flask_cors import CORS
 
 app = Flask(__name__)
 autism_model = pickle.load(open('gradient_boosting_model.pkl', 'rb'))
+# ocd_model=pickle.load(open('ocd.pkl', 'rb'))
+
+CORS(app)
+CORS(app, origins='http://localhost:5173', methods=['POST'], headers=['Content-Type'])
+
 
 
 # Example usage
@@ -114,7 +120,7 @@ def predict_autism():
         input[-1:-1] = one_hot_encoded_category
         print (input,len(input))
         input_to_model = np.array([input[:-2]])
-        predicted = 'Null'
+        # predicted = 'Null'
         # model=pickle.load(open('autism_gradient_boosting_model.pkl','rb'))
         # predicted=model.predict(input_to_model)
         # with open('D:\Project upload\\bolthack\\autism.pkl', 'rb') as f:
@@ -140,20 +146,30 @@ def predict_ocd():
         data = request.json
         # DiagnosisDate=data	
         # Age=	
-        # Gender=	
-        # Ethnicity=	
-        # MaritalStatus=	
+        # Gender=	data['gender']
+        # Ethnicity=data['ethnicity']
+        # MaritalStatus=	0
         # EducationLevel=	
         # SymptomsDuration=	
-        # PreviousDiagnoses=	
-        # FamilyHistory=	
-        # ObsessionType=	
-        # CompulsionType=	
+        # PreviousDiagnoses=	data['previous_diagnosis']
+        # FamilyHistory=	data['family_history']
+        # ObsessionType=	data['observation_type']
+        # YBocs=	data['ybocs']
         # ObsessionScore=	
         # CompulsionScore=	
         # DepressionDiagnosis=	
         # AnxietyDiagnosis=	
         # Medications=
+        # input=[
+        #     Gender,
+        #     Ethnicity,
+        #     PreviousDiagnoses,
+        #     FamilyHistory,
+        #     ObsessionType,
+        #     YBocs
+        # ]
+        # input_to_model=np.array([input])
+        # predicted=rev_convert(ocd_model.predict(input_to_model))
 
         response_data = {}
         return response_data

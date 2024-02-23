@@ -1,4 +1,6 @@
+import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const Autism = () => {
     const [a1, setA1] = useState(null);
@@ -20,8 +22,10 @@ const Autism = () => {
     const [applicant, setApplicant] = useState(null);
     const [whyAreYouTake, setWhyAreYouTake] = useState(null);
     const [loading, setLoading] = useState(false);
+    
+    const navigate = useNavigate();
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         setLoading(true);
         const data = {
             "a1": a1,
@@ -43,8 +47,15 @@ const Autism = () => {
             "applicant": applicant,
             "whyAreYouTake": whyAreYouTake
         }
-
+        const res = await axios.post("http://172.31.176.1:5000/autism", data);
+        console.log("Result from server: ", res.data);
         setLoading(false);
+        if(res.data == "Yes"){
+            navigate('/autismTherapy');
+        }
+        else{
+            navigate('/noAutism');
+        }
     }
 
     return (
@@ -247,13 +258,26 @@ const Autism = () => {
                                 <label htmlFor="age" className="font-poppins block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                                     Ethnicity
                                 </label>
-                                <input
-                                    type="text"
+                                <select
                                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    id="ethnicity"
+                                    id="Ethnicity"
                                     value={ethnicity}
                                     onChange={(e) => setEthinicity(e.target.value)}
-                                />
+                                >
+                                    <option value="">Select Answer</option>
+                                    <option value="Asian">Asian</option>
+                                    <option value="Middle Eastern">Middle Eastern</option>
+                                    <option value="White European">White European</option>
+                                    <option value="Hispanic">Hispanic</option>
+                                    <option value="Black">Black</option>
+                                    <option value="South Asian">South Asian</option>
+                                    <option value="Native Indian">Native Indian</option>
+                                    <option value="Latino">Latino</option>
+                                    <option value="Mixed">Mixed</option>
+                                    <option value="Pacifica">Pacifica</option>
+                                    <option value="Turkish">Turkish</option>
+                                    <option value="Others">Others</option>
+                                </select>
                             </div>
                             <div className="w-full px-3 mb-6">
                                 <label htmlFor="Q4" className="font-poppins block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
@@ -304,7 +328,7 @@ const Autism = () => {
                             </div>
                             <div className="w-full px-3 mb-6">
                                 <label htmlFor="age" className="font-poppins block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                                    Why are taking the test ?
+                                    Why are you taking the test ?
                                 </label>
                                 <input
                                     type="text"

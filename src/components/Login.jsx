@@ -23,7 +23,7 @@ const Login = () => {
         await logIn(email, password);
         console.log('Logged In Successfully')
         // setIsLoading(false);
-        navigate("/carform");
+        navigate("/");
       }
       catch (err) {
         // setError(authErrorCodesToMsgs(err.code));

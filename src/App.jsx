@@ -9,6 +9,8 @@ import Footer from './components/Footer';
 import GeminiPro from './components/GeminiPro';
 import Autism from './components/Autism';
 import SearchBar from './components/YoutubeSearch';
+import AutismTherapy from './components/AutismTherapy';
+import NoAutism from './components/NoAutism';
 function App() {
 
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route path="/gemini" exact element={<GeminiPro />} />
             <Route path="/autism" exact element={<Autism/>} />
             <Route path="/yt" exact element={<SearchBar/>} />
+            <Route path='/autismTherapy' element={<AutismTherapy/>}/>
+            <Route path='/noAutism' element={<NoAutism/>}/>
           </Routes>
           <Footer/>
         </UserAuthContextProvider>

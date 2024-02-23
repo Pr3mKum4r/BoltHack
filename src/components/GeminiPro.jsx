@@ -86,7 +86,7 @@ function GeminiPro() {
                 }
               </>
               :
-              <h1>No Disorder Found</h1>
+              <h1 className="font-poppins">No Disorder Found</h1>
             }
           </> :
           <>

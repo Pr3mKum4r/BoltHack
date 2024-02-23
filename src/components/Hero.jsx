@@ -12,7 +12,7 @@ const Hero = () =>{
                         disabilities. Through our innovative web app, we provide accurate
                         diagnoses and a supportive community.
                     </h1>
-                    <a type="button" href="#services" className="text-white w-fit cursor-pointer bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">View All Services</a>
+                    <a type="button" href="#services" className="font-poppins text-white w-fit cursor-pointer bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">View All Services</a>
                 </div>
                 <div>
                     <img

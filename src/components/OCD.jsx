@@ -22,7 +22,7 @@ const OCD = () =>{
             "ObsessionScore": ObsessionScore,
             "CompulsionScore": CompulsionScore
         }
-        const res = await axios.post("http://172.31.176.1:5000/ocd", data);
+        const res = await axios.post("http://localhost:5000/ocd", data);
         console.log("Result from server: ", res.data);
         setLoading(false);
     }

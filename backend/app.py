@@ -136,7 +136,7 @@ def predict_dyslexia():
         return response_data
 
 # OCD MODEL
-ocd_model = pickle.load(open('ocd.pkl', 'rb'))
+ocd_model = pickle.load(open('pickle/ocd.pkl', 'rb'))
 
 ethinicity_mapping = {'Caucasian':0, 'African':1, 'Asian':2, 'Hispanic':3}
 gender_mapping = {'Male':0, 'Female':1}
@@ -148,18 +148,18 @@ obsession_mapping = {'Contamination':0, 'Harm-related':1, 'Hoarding':2, 'Religio
 def predict_ocd():
     if request.method == 'POST':
         data = request.json
-        
+        print(data)
         Gender = gender_mapping[data['Gender']]
         Ethnicity = ethinicity_mapping[data['Ethnicity']]
         MaritalStatus =  0 
-        PreviousDiagnoses = previous_diagnosis_mapping[data['Previous Diagnoses']]
-        FamilyHistory = family_history_mapping[data['Family History of OCD']]
-        ObsessionType = obsession_mapping[data['Obsession Type']]
-        ObsessionScore = data['Y-BOCS Score (Obsessions)']
-        CompulsionScore = data['Y-BOCS Score (Compulsions)']
+        PreviousDiagnoses = previous_diagnosis_mapping[data['PreviousDiagnoses']]
+        FamilyHistory = family_history_mapping[data['FamilyHistory']]
+        ObsessionType = obsession_mapping[data['ObsessionType']]
+        ObsessionScore = int(data['ObsessionScore'])
+        CompulsionScore = int(data['CompulsionScore'])
         
         # Prepare the input data for the model
-        input_to_model = np.array([[
+        input=[
             Gender,
             Ethnicity,
             MaritalStatus,
@@ -168,13 +168,15 @@ def predict_ocd():
             ObsessionType,
             ObsessionScore,
             CompulsionScore
-        ]])
-        
+        ]
+        print(input)
+        input_to_model = np.array([input])
+        print(input_to_model)
         predicted = ocd_model.predict(input_to_model)
-        
+        print(predicted)
         response_data = {'prediction': predicted[0]}
         
-        return jsonify(response_data)
+        return rev_convert(predicted)
 
 
 if __name__ == '__main__':

@@ -1,9 +1,15 @@
 from flask import Flask, request, jsonify
 import pickle
 import numpy as np
+from flask_cors import CORS
 
 app = Flask(__name__)
 autism_model = pickle.load(open('gradient_boosting_model.pkl', 'rb'))
+# ocd_model=pickle.load(open('ocd.pkl', 'rb'))
+
+CORS(app)
+CORS(app, origins='http://localhost:5173', methods=['POST'], headers=['Content-Type'])
+
 
 
 # Example usage
@@ -59,10 +65,6 @@ def one_hot_encode_ethnicity(ethnicity):
     return one_hot_encoded
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello World'
-
 
 @app.route('/autism', methods=['POST'])
 def predict_autism():
@@ -114,7 +116,7 @@ def predict_autism():
         input[-1:-1] = one_hot_encoded_category
         print (input,len(input))
         input_to_model = np.array([input[:-2]])
-        predicted = 'Null'
+        # predicted = 'Null'
         # model=pickle.load(open('autism_gradient_boosting_model.pkl','rb'))
         # predicted=model.predict(input_to_model)
         # with open('D:\Project upload\\bolthack\\autism.pkl', 'rb') as f:
@@ -133,30 +135,46 @@ def predict_dyslexia():
         response_data = {}
         return response_data
 
+# OCD MODEL
+ocd_model = pickle.load(open('ocd.pkl', 'rb'))
+
+ethinicity_mapping = {'Caucasian':0, 'African':1, 'Asian':2, 'Hispanic':3}
+gender_mapping = {'Male':0, 'Female':1}
+previous_diagnosis_mapping = {'None':0, 'GAD':1, 'MDD':2, 'Panic Disorder':3, 'PTSD':4}
+family_history_mapping = {'Yes':1, 'No':0}
+obsession_mapping = {'Contamination':0, 'Harm-related':1, 'Hoarding':2, 'Religious':3, 'Symmetry':4}
 
 @app.route('/ocd', methods=['POST'])
 def predict_ocd():
     if request.method == 'POST':
         data = request.json
-        # DiagnosisDate=data	
-        # Age=	
-        # Gender=	
-        # Ethnicity=	
-        # MaritalStatus=	
-        # EducationLevel=	
-        # SymptomsDuration=	
-        # PreviousDiagnoses=	
-        # FamilyHistory=	
-        # ObsessionType=	
-        # CompulsionType=	
-        # ObsessionScore=	
-        # CompulsionScore=	
-        # DepressionDiagnosis=	
-        # AnxietyDiagnosis=	
-        # Medications=
-
-        response_data = {}
-        return response_data
+        
+        Gender = gender_mapping[data['Gender']]
+        Ethnicity = ethinicity_mapping[data['Ethnicity']]
+        MaritalStatus =  0 
+        PreviousDiagnoses = previous_diagnosis_mapping[data['Previous Diagnoses']]
+        FamilyHistory = family_history_mapping[data['Family History of OCD']]
+        ObsessionType = obsession_mapping[data['Obsession Type']]
+        ObsessionScore = data['Y-BOCS Score (Obsessions)']
+        CompulsionScore = data['Y-BOCS Score (Compulsions)']
+        
+        # Prepare the input data for the model
+        input_to_model = np.array([[
+            Gender,
+            Ethnicity,
+            MaritalStatus,
+            PreviousDiagnoses,
+            FamilyHistory,
+            ObsessionType,
+            ObsessionScore,
+            CompulsionScore
+        ]])
+        
+        predicted = ocd_model.predict(input_to_model)
+        
+        response_data = {'prediction': predicted[0]}
+        
+        return jsonify(response_data)
 
 
 if __name__ == '__main__':

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router";
 
 const Autism = () => {
@@ -47,8 +48,8 @@ const Autism = () => {
             "applicant": applicant,
             "whyAreYouTake": whyAreYouTake
         }
-        const res = await axios.post("http://172.31.176.1:5000/autism", data);
-        console.log("Result from server: ", res.data);
+        const res = await axios.post('http://127.0.0.1:5000/autism', data);
+        console.log("Result from server : ", res.data)
         setLoading(false);
         if(res.data == "Yes"){
             navigate('/autismTherapy');

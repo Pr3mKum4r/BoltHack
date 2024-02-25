@@ -1,0 +1,11 @@
+.game1Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+  }
+  
+  .heading{
+    text-align: center;
+  }

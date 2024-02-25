@@ -39,12 +39,7 @@ function GeminiPro() {
 
   const fetchData = async () => {
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-<<<<<<< Updated upstream
     const prompt = `The age of the person is ${age},The gender of the person is ${gender} the Medical history(Past diagnoses, current medications, family history of neurological disorders, etc) is: ${MedicalHistory} , the symptoms(Specific symptoms experienced, onset and duration, severity, impact on daily life, etc) are ${symptoms},the functional limitations( Difficulties with mobility, speech, cognitive function, etc) are :${FunctionalLimitations}  suggest which neurological disorder the person has as a preliminary research purpose diagnosis and its treatment options adn reccomend visiting the specialist doctor related to this disorder.Give me the anwser in string with json like format so that it can be converted to JSON, give json fixed headers as preliminary_diagnosis, specialist_doctor, treatment_options , always give treatment options even if null in an array. `;
-=======
-    const prompt = `
-    give me a specific youtube url of  Cognitive behavioral therapy used for treating Autism spectrum disorder (ASD).give me only one single youtube url dont give anything else other than the youtube url.The links should be of videos uploaded recently and should be strictly valid and are not videos with :This video isn't available any more `;
->>>>>>> Stashed changes
     const result = await model.generateContent(prompt);
     const response = await result.response;
     let text = response.text();
@@ -198,9 +193,4 @@ function GeminiPro() {
   );
 }
 
-<<<<<<< Updated upstream
 export default GeminiPro;
-=======
-export default GeminiPro;
-
->>>>>>> Stashed changes

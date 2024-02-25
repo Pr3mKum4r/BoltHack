@@ -17,6 +17,8 @@ import Game1Play from './components/Game1Play';
 import Game2Instructions from './components/Game2Instructions';
 import Game2Play from './components/Game2Play';
 import DyslexiaResults from './components/DyslexiaResults';
+import OCDTherapy from './components/OCDTherapy';
+import NoOCD from './components/NoOCD';
 function App() {
 
   return (
@@ -38,6 +40,8 @@ function App() {
             <Route path='/game2Instructions' element={<Game2Instructions/>}/>
             <Route path='/game2Play' element={<Game2Play/>}/>
             <Route path='/dyslexiaResults' element={<DyslexiaResults/>}/>
+            <Route path='/OCDTherapy' element={<OCDTherapy/>}/>
+            <Route path='/NoOCD' element={<NoOCD/>}/>
           </Routes>
           <Footer/>
         </UserAuthContextProvider>

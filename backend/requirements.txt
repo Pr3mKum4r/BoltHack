@@ -6,6 +6,3 @@ pandas
 matplotlib
 seaborn
 flask_cors
-pickle
-modin[all]
-scikit-learn-intelex

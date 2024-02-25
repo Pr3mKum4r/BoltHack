@@ -1,7 +1,11 @@
 
 # Neuro Assist
 
-Neuro Assist is an innovative project aimed at diagnosing neural diseases in children using a combination of large language models and specialized machine learning algorithms. The project focuses on providing an initial diagnosis through language processing, allowing users to input symptoms and receive preliminary assessments. It further validates these results using dedicated machine learning models tailored to specific neural disorders, providing binary responses for confirmation.
+Neuro Assist
+
+<img src="https://ik.imagekit.io/g5vnu7nfy/public/logo.webp?updatedAt=1708871578766" width="100" alt="App Screenshot">
+
+ is an innovative project aimed at diagnosing neural diseases in children using a combination of large language models and specialized machine learning algorithms. The project focuses on providing an initial diagnosis through language processing, allowing users to input symptoms and receive preliminary assessments. It further validates these results using dedicated machine learning models tailored to specific neural disorders, providing binary responses for confirmation.
 
 #Tech Stack 
 
@@ -88,5 +92,34 @@ Neuro Assist is an innovative project aimed at diagnosing neural diseases in chi
    ```bash
    python ./app.py
    ```
+
+
+
+## Screenshots
+
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20191316.png?updatedAt=1708871586198)
+
+
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195624.png?updatedAt=1708871585644)
+
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20191454.png?updatedAt=1708871589319)
+
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20191657.png?updatedAt=1708871582241)
+
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195206.png?updatedAt=1708871582491)
+
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195328.png?updatedAt=1708871589172)
+
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20191532.png?updatedAt=1708871585833)
+
+
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195845.png?updatedAt=1708871586240)
+
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/logo.webp?updatedAt=1708871578766)
+
+
+
+
+
 
 

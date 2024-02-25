@@ -90,9 +90,31 @@ Neuro Assist
 5. **Run Server:**
 
    ```bash
-   python ./app.py
+   python3 ./app.py
    ```
+   
+**Backend**
 
+go into api directory using command
+
+```bash
+cd api/
+```
+run server on port 5000 by running command
+
+```bash
+ python3 app.py
+```
+
+Model was trained on virtual machine by ssh using commands
+
+```bash
+ ssh -L 8888:localhost:8888 -J guest@146.152.232.8 ubuntu@100.82.14.144
+```
+
+```bash
+Running jupyter notebook on localhost:8000
+```
 
 
 ## Screenshots
@@ -104,28 +126,16 @@ Neuro Assist
 
 ![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20191454.png?updatedAt=1708871589319)
 
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20191657.png?updatedAt=1708871582241)
+
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195206.png?updatedAt=1708871582491)
+
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195328.png?updatedAt=1708871589172)
+
 ![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20191532.png?updatedAt=1708871585833)
 
-**Initial Diagnosis Using GenAI**
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20191657.png?updatedAt=1708871582241)
-**Diagnosis Result**
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195206.png?updatedAt=1708871582491)
-**Youtube Videos on recommended Therapy**
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195328.png?updatedAt=1708871589172)
-**Autism Diagnosis using Machine Learning Model trained using oneAPI AI Tools**
+
 ![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195845.png?updatedAt=1708871586240)
-**Autism Results with recommened Therapy videos**
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/autismTherapy.png?updatedAt=1708880747203)
-**OCD Diagnosis using Machine Learning Model trained using oneAPI AI Tools**
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/ocd.png?updatedAt=1708881664509)
-**OCD Results with recommened Therapy videos**
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/ocdTherapy.png?updatedAt=1708881783820)
-**Interactice Game for testing Dyslexia in children**
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/dyslexiaGame1.png?updatedAt=1708882091348)
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/dyslexiaGame1Play.png?updatedAt=1708882280937)
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/dyslexiaGame2.png?updatedAt=1708882280870)
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/dyslexiaGame2Play.png?updatedAt=1708882280909)
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/dyslexiaResult.png?updatedAt=1708882280943)
 
 ![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/logo.webp?updatedAt=1708871578766)
 

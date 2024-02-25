@@ -120,6 +120,12 @@ Neuro Assist
 ![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/ocd.png?updatedAt=1708881664509)
 **OCD Results with recommened Therapy videos**
 ![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/ocdTherapy.png?updatedAt=1708881783820)
+**Interactice Game for testing Dyslexia in children**
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/dyslexiaGame1.png?updatedAt=1708882091348)
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/dyslexiaGame1Play.png?updatedAt=1708882280937)
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/dyslexiaGame2.png?updatedAt=1708882280870)
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/dyslexiaGame2Play.png?updatedAt=1708882280909)
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/dyslexiaResult.png?updatedAt=1708882280943)
 
 ![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/logo.webp?updatedAt=1708871578766)
 

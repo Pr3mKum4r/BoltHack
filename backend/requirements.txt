@@ -1,0 +1,11 @@
+flask
+scikit-learn
+xgboost
+numpy
+pandas
+matplotlib
+seaborn
+flask_cors
+pickle
+modin[all]
+scikit-learn-intelex

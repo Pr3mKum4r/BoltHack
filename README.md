@@ -94,6 +94,7 @@ Neuro Assist
    ```
    
 **Backend**
+
 go into api directory using command
 
 ```bash
@@ -112,7 +113,7 @@ Model was trained on virtual machine by ssh using commands
 ```
 
 ```bash
-Running jupyter nitebook on localhost:8000
+Running jupyter notebook on localhost:8000
 ```
 
 

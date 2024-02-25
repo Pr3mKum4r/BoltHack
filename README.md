@@ -90,7 +90,7 @@ Neuro Assist
 5. **Run Server:**
 
    ```bash
-   python ./app.py
+   python3 ./app.py
    ```
    
 **Backend**
@@ -102,13 +102,13 @@ cd api/
 run server on port 5000 by running command
 
 ```bash
- python main.py
+ python3 app.py
 ```
 
 Model was trained on virtual machine by ssh using commands
 
 ```bash
- ssh -J guest@146.152.232.8 ubuntu@100.82.69.132 -L 8888:100.82.69.132
+ ssh -L 8888:localhost:8888 -J guest@146.152.232.8 ubuntu@100.82.14.144
 ```
 
 ```bash

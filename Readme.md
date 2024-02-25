@@ -104,16 +104,22 @@ Neuro Assist
 
 ![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20191454.png?updatedAt=1708871589319)
 
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20191657.png?updatedAt=1708871582241)
-
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195206.png?updatedAt=1708871582491)
-
-![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195328.png?updatedAt=1708871589172)
-
 ![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20191532.png?updatedAt=1708871585833)
 
-
+**Initial Diagnosis Using GenAI**
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20191657.png?updatedAt=1708871582241)
+**Diagnosis Result**
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195206.png?updatedAt=1708871582491)
+**Youtube Videos on recommended Therapy**
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195328.png?updatedAt=1708871589172)
+**Autism Diagnosis using Machine Learning Model trained using oneAPI AI Tools**
 ![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/Screenshot%202024-02-25%20195845.png?updatedAt=1708871586240)
+**Autism Results with recommened Therapy videos**
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/autismTherapy.png?updatedAt=1708880747203)
+**OCD Diagnosis using Machine Learning Model trained using oneAPI AI Tools**
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/ocd.png?updatedAt=1708881664509)
+**OCD Results with recommened Therapy videos**
+![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/ocdTherapy.png?updatedAt=1708881783820)
 
 ![App Screenshot](https://ik.imagekit.io/g5vnu7nfy/public/logo.webp?updatedAt=1708871578766)
 

@@ -64,7 +64,11 @@ def one_hot_encode_ethnicity(ethnicity):
 
     return one_hot_encoded
 
-
+@app.route('/test', methods=['GET'])
+def hello_world():
+    if request.method == 'GET':
+        return "Welcome to the server"
+        
 
 @app.route('/autism', methods=['POST'])
 def predict_autism():

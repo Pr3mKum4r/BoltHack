@@ -23,7 +23,7 @@ function App() {
             <Route path="/signup" exact element={<Signup />} />
             <Route path="/gemini" exact element={<GeminiPro />} />
             <Route path="/autism" exact element={<Autism/>} />
-            <Route path="/yt" exact element={<SearchBar/>} />
+            <Route path={`/yt/:id`} exact element={<SearchBar/>} />
             <Route path='/autismTherapy' element={<AutismTherapy/>}/>
             <Route path='/noAutism' element={<NoAutism/>}/>
             <Route path="/yt" exact element={<SearchBar/>} />

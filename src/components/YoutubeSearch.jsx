@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PropTypes from "prop-types";
-import { useLocation } from 'react-router';
+import { useParams } from 'react-router-dom';
 
 const YoutubeEmbed = ({ videoId }) => (
   <div className="video-responsive">
@@ -29,18 +29,24 @@ const SearchBar = () => {
 
   const handleSearch = async () => {
     const response = await axios.get(
-      `https://www.googleapis.com/youtube/v3/search?key=AIzaSyB89T8dNThIGUTNZxGaObbedpzAP5S-Z6k&q=${searchQuery}+therapy to cure&part=snippet&maxResults=2`
+      `https://www.googleapis.com/youtube/v3/search?key=AIzaSyB89T8dNThIGUTNZxGaObbedpzAP5S-Z6k&q=${searchQuery}+therapy+to+cure&part=snippet&maxResults=2`
     );
     setSearchResults(response.data.items);
   };
 
-  const location = useLocation();
+  const  {id} = useParams();
+  console.log('searchParams - ', id);
+  console.log('search - ', searchQuery);
+
   useEffect(() => {
-    // Parse query parameters
-    const queryParams = new URLSearchParams(location.search);
-    setSearchQuery(queryParams.get('element'));
-    handleSearch();
+    setSearchQuery(id);
   }, []);
+  useEffect(() => {
+    if(searchQuery != ''){
+      handleSearch();
+    }
+  },[searchQuery]);
+
   return (
     <div>
       {/* <form onSubmit={handleSearch}>

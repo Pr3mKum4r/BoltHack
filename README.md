@@ -92,7 +92,28 @@ Neuro Assist
    ```bash
    python ./app.py
    ```
+   
+**Backend**
+go into api directory using command
 
+```bash
+cd api/
+```
+run server on port 5000 by running command
+
+```bash
+ python main.py
+```
+
+Model was trained on virtual machine by ssh using commands
+
+```bash
+ ssh -J guest@146.152.232.8 ubuntu@100.82.69.132 -L 8888:100.82.69.132
+```
+
+```bash
+Running jupyter nitebook on localhost:8000
+```
 
 
 ## Screenshots

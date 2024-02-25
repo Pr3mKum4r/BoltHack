@@ -61,7 +61,7 @@ function GeminiPro() {
 
   const handleYouTubeIconClick = (element) => {
     // Navigate with query parameters
-    navigate(`/yt?element=${encodeURIComponent(element)}`);
+    navigate(`/yt/${encodeURIComponent(element)}`);
   };
 
   return (

@@ -163,6 +163,7 @@ function Navbar() {
                 fontSize: "14pt",
               }}
               className="navbar-menu-text"
+              href="/#services"
             >
               Services
             </Button>

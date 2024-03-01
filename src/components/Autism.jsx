@@ -47,7 +47,7 @@ const Autism = () => {
             "applicant": applicant,
             "whyAreYouTake": whyAreYouTake
         }
-        const res = await axios.post('http://127.0.0.1:5000/autism', data);
+        const res = await axios.post('https://bolthack.onrender.com/autism', data);
         console.log("Result from server : ", res.data)
         setLoading(false);
         if(res.data == "Yes"){

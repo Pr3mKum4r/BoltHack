@@ -3,12 +3,12 @@ import {getAuth} from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDD_EA8azW8KWKEohtsP-hhxI8e-FD4cMs",
-  authDomain: "carbonsense-93f8d.firebaseapp.com",
-  projectId: "carbonsense-93f8d",
-  storageBucket: "carbonsense-93f8d.appspot.com",
-  messagingSenderId: "1008393022235",
-  appId: "1:1008393022235:web:12622d50a9e3730e3941be"
+  apiKey: import.meta.env.VITE_FirebaseAPIKey,
+  authDomain: import.meta.env.VITE_FirebaseAuthDomain,
+  projectId: import.meta.env.VITE_FirebaseProjectId,
+  storageBucket: import.meta.env.VITE_FirebaseStorageBucket,
+  messagingSenderId: import.meta.env.VITE_FirebaseMessagingSenderId,
+  appId: import.meta.env.VITE_FirebaseAppId
 };
 
 // Initialize Firebase

@@ -25,7 +25,7 @@ const OCD = () =>{
             "ObsessionScore": ObsessionScore,
             "CompulsionScore": CompulsionScore
         }
-        const res = await axios.post("http://localhost:5000/ocd", data);
+        const res = await axios.post("https://bolthack.onrender.com/ocd", data);
         console.log("Result from server: ", res.data);
         setLoading(false);
         if(res.data == "Yes"){

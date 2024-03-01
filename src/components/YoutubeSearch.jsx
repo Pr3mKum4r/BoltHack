@@ -29,7 +29,7 @@ const SearchBar = () => {
 
   const handleSearch = async () => {
     const response = await axios.get(
-      `https://www.googleapis.com/youtube/v3/search?key=AIzaSyB89T8dNThIGUTNZxGaObbedpzAP5S-Z6k&q=${searchQuery}+therapy+to+cure&part=snippet&maxResults=2`
+      `https://www.googleapis.com/youtube/v3/search?key=${process.env.YotubeAPIKey}=${searchQuery}+therapy+to+cure&part=snippet&maxResults=2`
     );
     setSearchResults(response.data.items);
   };

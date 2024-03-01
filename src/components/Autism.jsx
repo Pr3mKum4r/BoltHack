@@ -59,8 +59,8 @@ const Autism = () => {
     }
 
     return (
-        <div className="flex justify-center flex-col items-center mx-auto">
-            <div className=" flex justify-center flex-col items-center bg-gray-300 px-10 rounded my-10 min-h-[60vh] w-[90vh]">
+        <div className="px-5 md:px-0 flex justify-center flex-col items-center mx-auto">
+            <div className="flex justify-center flex-col items-center bg-gray-300 px-10 rounded my-10 min-h-[60vh] md:w-[90vh]">
                 <h1 className="text-3xl font-bold font-poppins mb-4 text-center">Diagnosis of Autism</h1>
                 <div className="flex justify-center mt-5 mb-5">
                     <form>

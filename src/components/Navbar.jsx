@@ -24,19 +24,24 @@ function Navbar() {
   const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
+    event.stopPropagation();
     setAnchorElNav(event.currentTarget);
   };
   const handleOpenUserMenu = (event) => {
+    event.stopPropagation();
     setAnchorElUser(event.currentTarget);
-    navigate('/carform');
+    navigate('/');
   };
 
   const handleCloseNavMenu = () => {
+    event.stopPropagation();
     setAnchorElNav(null);
   };
   const handleCloseUserMenu = () => {
+    event.stopPropagation();
     setAnchorElUser(null);
   };
+
 
   const {currentUser, logOut} = useUserAuth();
   const [profileImg, setProfileImg] = useState('/static/images/avatar/2.jpg');
@@ -94,6 +99,7 @@ function Navbar() {
                 vertical: "bottom",
                 horizontal: "left",
               }}
+              disableScrollLock={true}
               keepMounted
               transformOrigin={{
                 vertical: "top",
@@ -108,16 +114,23 @@ function Navbar() {
               className="nav-menu"
             >
               <MenuItem key={"Home"} onClick={handleCloseNavMenu}>
-                {/* <Link to='/about' className='navlink'> */}
+                <Link to='/#services' className='navlink'>
                 <Typography textAlign="center" className="navbar-menu-text">
-                  About
+                  Services
                 </Typography>
-                {/* </Link> */}
+                </Link>
               </MenuItem>
               <MenuItem key={"About"} onClick={handleCloseNavMenu}>
                 <Link to="/signup" className="navlink">
                   <Typography textAlign="center" className="navbar-menu-text">
                     Sign Up
+                  </Typography>
+                </Link>
+              </MenuItem>
+              <MenuItem key={"About"} onClick={handleCloseNavMenu}>
+                <Link to="/login" className="navlink">
+                  <Typography textAlign="center" className="navbar-menu-text">
+                    Log In
                   </Typography>
                 </Link>
               </MenuItem>

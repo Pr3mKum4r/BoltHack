@@ -12,8 +12,8 @@ const Services = () => {
 
     return (
         <section id="services">
-        <div className="flex p-10 bg-[#F4F8FD] items-center">
-            <div className="flex flex-col w-4/5 mx-auto justify-around items-center">
+        <div className="flex p-5 md:p-10 bg-[#F4F8FD] items-center">
+            <div className="flex flex-col w-full px-5 md:px-0 md:w-4/5 mx-auto justify-around items-center">
                 <div className="flex items-center justify-between w-full mb-5">
                     <h1 className="font-poppins text-5xl font-medium mb-5">
                         Our Services
@@ -25,8 +25,8 @@ const Services = () => {
                         View All Services
                     </div> */}
                 </div>
-                <div className="flex">
-                    <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col w-1/3 mr-7">
+                <div className="flex flex-col md:flex-row">
+                    <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col mb-10 md:mb-0 w-full md:w-1/3 mr-0 md:mr-7">
                         <img src="childDiag.webp" alt="alt" className="w-full" />
                         <h1 className="text-lg font-poppins font-semibold mb-1 mt-5">
                             Child Diagnosis
@@ -36,7 +36,7 @@ const Services = () => {
                         </h1>
                         <a type="button" href="/gemini" className="font-poppins text-white w-fit cursor-pointer bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Checkout</a>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col w-1/3 ml-7">
+                    <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col mb-10 md:mb-0 w-full md:w-1/3 md:ml-7">
                         <img src="learningDis.webp" alt="alt" className="w-full" />
                         <h1 className="text-lg font-poppins font-semibold mb-1 mt-5">
                             Test for Autism Detection
@@ -46,7 +46,7 @@ const Services = () => {
                         </h1>
                         <a type="button" href="/autism" className="font-poppins text-white w-fit cursor-pointer bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Checkout</a>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col w-1/3 ml-7">
+                    <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col mb-10 md:mb-0 w-full md:w-1/3 md:ml-7">
                         <img src="OCD.png" alt="alt" className="w-full" />
                         <h1 className="text-lg font-poppins font-semibold mb-1 mt-5">
                             Test for OCD
@@ -56,7 +56,7 @@ const Services = () => {
                         </h1>
                         <a type="button" href="/ocd" className="font-poppins text-white w-fit cursor-pointer bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Checkout</a>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col w-1/3 ml-7">
+                    <div data-aos="fade-up" data-aos-duration="500" className="flex flex-col mb-10 md:mb-0 w-full md:w-1/3 md:ml-7">
                         <img src="dyslexia.webp" alt="alt" className="w-full" />
                         <h1 className="text-lg font-poppins font-semibold mb-1 mt-5">
                             Test for Dyslexia
@@ -75,8 +75,8 @@ const Services = () => {
                     </span>
                 </div>
 
-                <div className="flex justify-around w-full">
-                    <div className="flex flex-col w-1/3 mr-7">
+                <div className="flex flex-col-reverse md:flex-row justify-around w-full">
+                    <div className="flex flex-col w-full md:w-1/3 mr-7">
                         <h1 className="text-3xl font-poppins font-semibold mb-1 mt-5">
                             Features
                         </h1>
@@ -122,7 +122,7 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col w-1/3 mr-7">
+                    <div className="flex flex-col w-full md:w-1/3 mr-7">
                         <h1 className="text-3xl font-poppins font-semibold mb-1 mt-5">
                             Features
                         </h1>
@@ -168,7 +168,7 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <img src="features.webp" alt="alt" className="w-[400px] rounded-md" />
+                    <img src="features.webp" alt="alt" className="w-[250px] md:w-[400px] rounded-md" />
                 </div>
             </div>
         </div>

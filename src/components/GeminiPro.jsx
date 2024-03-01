@@ -70,16 +70,16 @@ function GeminiPro() {
 
   return (
     <div className="flex flex-col items-center container mx-auto">
-      <div className=" flex justify-center flex-col items-center bg-gray-300 px-10 rounded my-10 min-h-[60vh] min-w-[40vw]">
+      <div className="mx-5 md:mx-0 flex justify-center flex-col items-center bg-gray-300 px-10 rounded my-10 min-h-[60vh] md:min-w-[40vw]">
         {apiData ?
           <>
             {apiData.preliminary_diagnosis && apiData.specialist_doctor && apiData.treatment_options ?
               <>
-                <h1 className="font-poppins text-3xl text-start">Preliminary Diagnosis</h1>
-                <h1 className="font-poppins text-xl text-gray-500 text-start">{apiData["preliminary_diagnosis"]}</h1>
-                <h1 className="font-poppins text-3xl text-start">Specialist Doctor</h1>
-                <h1 className="font-poppins text-xl text-gray-500 text-start">{apiData.specialist_doctor}</h1>
-                <h1 className="font-poppins text-3xl text-start">Treatment Options</h1>
+                <h1 className="font-poppins text-3xl text-center md:text-start">Preliminary Diagnosis</h1>
+                <h1 className="font-poppins text-xl text-gray-500 text-center md:text-start">{apiData["preliminary_diagnosis"]}</h1>
+                <h1 className="font-poppins text-3xl text-center md:text-start">Specialist Doctor</h1>
+                <h1 className="font-poppins text-xl text-gray-500 text-center md:text-start">{apiData.specialist_doctor}</h1>
+                <h1 className="font-poppins text-3xl text-center md:text-start">Treatment Options</h1>
                 {
                   apiData.treatment_options.map((element, index) => (
                     <div className="flex items-center" key={index}>
@@ -94,7 +94,7 @@ function GeminiPro() {
             }
           </> :
           <>
-            <h1 className="text-3xl font-bold font-poppins mb-4">Diagnosis of Neurological Disorders</h1>
+            <h1 className="text-3xl text-center md:text-start font-bold font-poppins mb-4">Diagnosis of Neurological Disorders</h1>
             <div className="flex justify-center mt-5 mb-5">
               <form>
                 <div className="flex justify-center w-full items-center flex-col mb-6">

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const OCD = () =>{
+const OCD = () => {
     const [Gender, setGender] = useState("");
     const [Ethnicity, setEthnicity] = useState("");
     const [PreviousDiagnoses, setPreviousDiagnoses] = useState("");
@@ -28,20 +28,20 @@ const OCD = () =>{
         const res = await axios.post("https://bolthack.onrender.com/ocd", data);
         console.log("Result from server: ", res.data);
         setLoading(false);
-        if(res.data == "Yes"){
+        if (res.data == "Yes") {
             navigate('/OCDTherapy');
         }
-        else{
+        else {
             navigate('/noOCD');
         }
     }
 
 
     return (
-        <div className="flex justify-center flex-col items-center mx-auto">
-            <div className=" flex justify-center flex-col items-center bg-gray-300 px-10 rounded my-10 min-h-[60vh] w-[90vh]">
+        <div className="px-5 md:px-0 flex justify-center flex-col items-center mx-auto">
+            <div className="mx-5 flex justify-center flex-col items-center bg-gray-300 px-10 rounded my-10 min-h-[60vh] w-[70vw] md:w-[90vh]">
                 <h1 className="text-3xl font-bold font-poppins mb-4 text-center">Diagnosis of OCD</h1>
-                <div className="flex justify-center mt-5 mb-5">
+                <div className="flex w-[75vw] justify-center mt-5 mb-5">
                     <form className="w-[650px] flex justify-center">
                         <div className="flex justify-center w-full items-center flex-col mb-6">
                             <div className="w-full px-3 mb-6">
@@ -56,7 +56,7 @@ const OCD = () =>{
                                 >
                                     <option value="">Select Answer</option>
                                     <option value="Male">Male</option>
-                                    <option value="No">No</option>
+                                    <option value="Female">Female</option>
                                 </select>
                             </div>
                             <div className="w-full px-3 mb-6">

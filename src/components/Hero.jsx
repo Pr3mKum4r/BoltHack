@@ -1,4 +1,14 @@
+import { useEffect } from "react";
+import axios from "axios";
+
 const Hero = () =>{
+    useEffect(() => {
+        const asyncFunc = async () => {
+            const res = await axios.get("https://bolthack.onrender.com/test");
+            console.log(res.data);
+        }
+        asyncFunc();
+    }, []);
     return(
         <div className="flex mx-auto bg-[#F4F8FD] p-10 md:h-[580px]">
             <div className="flex-col-reverse md:flex-row flex w-full md:w-4/5 mx-auto items-center">

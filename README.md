@@ -5,7 +5,7 @@ Neuro Assist
 
 <img src="https://ik.imagekit.io/g5vnu7nfy/public/logo.webp?updatedAt=1708871578766" width="100" alt="App Screenshot">
 
- is an innovative project aimed at diagnosing neural diseases in children using a combination of large language models and specialized machine learning algorithms. The project focuses on providing an initial diagnosis through language processing, allowing users to input symptoms and receive preliminary assessments. It further validates these results using dedicated machine learning models tailored to specific neural disorders, providing binary responses for confirmation.
+Is an innovative project aimed at diagnosing neural diseases in children using a combination of large language models and specialized machine learning algorithms. The project focuses on providing an initial diagnosis through language processing, allowing users to input symptoms and receive preliminary assessments. It further validates these results using dedicated machine learning models tailored to specific neural disorders, providing binary responses for confirmation.
 
 #Tech Stack 
 
